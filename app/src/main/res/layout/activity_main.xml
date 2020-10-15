@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/fotoPeque"
+        android:layout_width="110dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="@dimen/dp24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jesuitas_logo" />
+
+    <ImageView
+        android:id="@+id/fotoGrande"
+        android:layout_width="413dp"
+        android:layout_height="219dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotoPeque"
+        app:srcCompat="@drawable/jesuitasrioja" />
+
+    <TextView
+        android:id="@+id/centro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/centro"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotoGrande" />
+
+    <ImageView
+        android:id="@+id/direccionImagen"
+        android:layout_width="@dimen/dp24"
+        android:layout_height="26dp"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/centro"
+        app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/emailImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/direccionImagen"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/telefonoImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp24"
+        android:layout_marginTop="@dimen/dp32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailImagen"
+        app:srcCompat="@drawable/phone" />
+
+    <TextView
+        android:id="@+id/direccionTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp24"
+        android:text="@string/direccion"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/direccionImagen"
+        app:layout_constraintStart_toEndOf="@+id/direccionImagen"
+        app:layout_constraintTop_toTopOf="@+id/direccionImagen"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <TextView
+        android:id="@+id/emailTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp24"
+        android:text="@string/email"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/emailImagen"
+        app:layout_constraintStart_toEndOf="@+id/emailImagen"
+        app:layout_constraintTop_toTopOf="@+id/emailImagen" />
+
+    <TextView
+        android:id="@+id/telefonoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp24"
+        android:text="@string/telefono"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/telefonoImagen"
+        app:layout_constraintStart_toEndOf="@+id/telefonoImagen"
+        app:layout_constraintTop_toTopOf="@+id/telefonoImagen" />
+
+    <ImageButton
+        android:id="@+id/BotonMeGusta"
+        android:layout_width="96dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="@dimen/dp24"
+        android:onClick="megusta"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoTexto"
+        app:srcCompat="@drawable/megusta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
